@@ -54,9 +54,10 @@ const logHottestDays = function(temperatures, threshhold) {
   //   temperatures.filter(t => t > threshhold).map(F => (F - 32) * (5 / 9))
   // );
 
-  temperatures.forEach(F => {
-    if (F > threshhold) console.log((F - 32) * (5 / 9));
-  });
+  // temperatures.forEach(F => {
+  //   if (F > threshhold) console.log((F - 32) * (5 / 9));
+  // });
+  logger(toCelsius(hottestDays(temperatures, threshhold)));
 };
 
 export { logger, toCelsius, hottestDays, logHottestDays };
